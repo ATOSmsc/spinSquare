@@ -35,14 +35,23 @@ class Player {
 			x: 0,
 			y: 1,
 		}
-		this.height = 100
+		this.height = 270
 	}
-
+	draw() {
+		c.fillStyle = '#D2691E'
+		c.fillRect(this.position.x + 40, this.position.y + 40, 20, 20) // cabeça
+		c.fillRect(this.position.x + 30, this.position.y + 60, 40, 50) // corpo
+		c.fillRect(this.position.x + 20, this.position.y + 70, 10, 30) // braço esquerdo
+		c.fillRect(this.position.x + 70, this.position.y + 70, 10, 30) // braço direito
+		c.fillRect(this.position.x + 30, this.position.y + 110, 10, 30) // perna esquerda
+		c.fillRect(this.position.x + 60, this.position.y + 110, 10, 30) // perna direita
+	}
+/*
 	draw() {
 		c.fillStyle = 'red'
-    	c.fillRect(this.position.x, this.position.y, 100, this.height)
+		c.fillRect(this.position.x, this.position.y, 100, this.height)
 	}
-
+*/
 	update() {
 		this.draw()
 
@@ -56,12 +65,12 @@ class Player {
 }
 
 const player = new Player({
-	x: 0,
-	y: 0,
+	x: 300,
+	y: 200,
 })
 const player2 = new Player({
-	x: 300,
-	y: 100,
+	x: 650,
+	y: 200,
 })
 
 const keys = {
